@@ -1,0 +1,11 @@
+body{background: #f1f1f1;font-family:Arial;}
+.text-style{border-radius: 4px;padding: 3px;color: $font-color;}
+#PiglatinApp .enter-text-label{@include margin-top(60px)}
+#PiglatinApp .user-input{width:60%;}
+#PiglatinApp .convert-btn-div, #PiglatinApp .entered-text-div{@include margin-top(10px)}
+#PiglatinApp .entered-text-span{@include background(grey);@extend .text-style}
+#PiglatinApp .result-div{@include margin-top(10px); margin-left: 16px;}
+#PiglatinApp .result-span-success{@include background(green); @extend .text-style;}
+#PiglatinApp .result-span-fail{@include background(red); @extend .text-style;}
+#PiglatinApp .last10-label{@include margin-top(25px);margin-bottom: 10px;padding-left: 44px;}
+#PiglatinApp .last10-table{margin-left: 44px;}

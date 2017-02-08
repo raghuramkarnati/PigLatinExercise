@@ -1,0 +1,7 @@
+@mixin background($background){
+  background: $background;
+}
+
+@mixin margin-top($margin-top){
+  margin-top: $margin-top;
+}

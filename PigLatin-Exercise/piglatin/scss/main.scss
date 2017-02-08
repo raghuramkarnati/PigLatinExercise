@@ -1,0 +1,9 @@
+/* BASE - Base styles, variables, mixins, etc. */
+@import 'base/_variables.scss';
+@import 'base/_mixins.scss';
+
+/*Modules - Common CSS */
+@import 'modules/_common.scss';
+
+/* Layouts - Page Layout Styles */
+@import 'layouts/_header.scss';

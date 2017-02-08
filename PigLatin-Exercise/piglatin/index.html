@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>PigLatin Exercise</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+      <!-- Optional theme -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="css/main.css">
+  </head>
+  <body class="container">
+      <div class="row header-div">
+        <div class="header-text">Welcome to PigLatin Conversion </div>
+      </div>
+      <div id="PiglatinApp" ng-app="PiglatinApp" ng-controller="PiglatinCtrl" ng-cloak>
+        <div class="row enter-text-label">
+          <div class="col-sm-12">
+            <b>Please enter text below</b>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <input class="user-input" type="text" ng-model="textInput" ng-keypress="keypress($event)"/>
+          </div>
+        </div>
+        <div class="row convert-btn-div">
+          <div class="col-sm-12">
+            <div>
+              <input type="button" class="btn btn-primary" value="Convert" ng-click="processInputText()" />
+            </div>
+          </div>
+        </div>
+        <div class="row entered-text-div">
+          <div class="col-sm-12">
+            <div class="">
+              <span class="entered-text-span">Entered Text</span>
+              <span><b>{{textInput}}</b></span>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 result-div">
+            <div class="">
+              <span class="res-btn result-span-success">Result</span>
+              <span><b>{{piglatinText}}</b></span>
+            </div>
+        </div>
+
+        <div class="row" ng-show="showLast10Conversions">
+          <div class="col-sm-12 last10-label">
+            <div>
+              <b>The last 10 PigLatin Conversions are shown in below table(most recent first)</b>
+            </div>
+        </div>
+        <table ng-show="showLast10Conversions" class="table table-bordered table-responsive last10-table">
+          <thead class="bg-primary">
+            <th scope="row">Entered Text</th>
+            <th scope="row">PigLatin Text</th>
+          </thead>
+          <tbody>
+            <tr ng-repeat="piglatinText in piglatinTexts|orderBy:$index:true">
+                <td>{{piglatinText.enteredText}}</td>
+                <td>{{piglatinText.pigLatinText}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <script type="text/javascript" src="js/all.min.js"></script>
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </body>
+</html>

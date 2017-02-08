@@ -1,0 +1,65 @@
+/* BASE - Base styles, variables, mixins, etc. */
+/*Modules - Common CSS */
+body {
+  background: #f1f1f1;
+  font-family: Arial;
+}
+
+.text-style, #PiglatinApp .entered-text-span, #PiglatinApp .result-span-success, #PiglatinApp .result-span-fail {
+  border-radius: 4px;
+  padding: 3px;
+  color: #FFF;
+}
+
+#PiglatinApp .enter-text-label {
+  margin-top: 60px;
+}
+
+#PiglatinApp .user-input {
+  width: 60%;
+}
+
+#PiglatinApp .convert-btn-div, #PiglatinApp .entered-text-div {
+  margin-top: 10px;
+}
+
+#PiglatinApp .entered-text-span {
+  background: grey;
+}
+
+#PiglatinApp .result-div {
+  margin-top: 10px;
+  margin-left: 16px;
+}
+
+#PiglatinApp .result-span-success {
+  background: green;
+}
+
+#PiglatinApp .result-span-fail {
+  background: red;
+}
+
+#PiglatinApp .last10-label {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  padding-left: 44px;
+}
+
+#PiglatinApp .last10-table {
+  margin-left: 44px;
+}
+
+/* Layouts - Page Layout Styles */
+.container .header-div {
+  width: 100%;
+  height: 120px;
+  background: #23282d;
+  font-size: 30px;
+  color: white;
+}
+
+.container .header-text {
+  line-height: 120px;
+  text-align: center;
+}
